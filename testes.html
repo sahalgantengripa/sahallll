@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>testes</title>
+</head>
+<body>
+    <form onsubmit="return false">
+        <label for="X">X</label>
+        <input type="number" id="ex"><br><br>
+        <label for="Y">Y</label>
+        <input type="number" id="Y">
+        <button onclick="cek_nilai()">Cek Nilai</button>
+    </form>
+    <div id="hasil"></div>
+   <script>
+    function cek_nilai() {
+        let x = parseInt(document.getElementById('ex').value)
+        let y = parseInt(document.getElementById('Y').value)
+        let p = x + y
+        document.getElementById('hasil').innerHTML = "P = " + p
+        if (p >=0 ) {
+           var q = x * y
+        } else {
+           var q = x / y
+        }
+        document.getElementById('hasil').innerHTML = "Q = " + q
+    }
+
+   </script>  
+</body>
+</html>

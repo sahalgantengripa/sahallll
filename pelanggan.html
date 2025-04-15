@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>status</title>
+</head>
+<body>
+    <form onsubmit="return false">
+        <label for="status">status</label>
+        <input type="text" id="sts">
+        <label for="jlf">jumlah lembar fotocopy</label>
+        <input type="number" id="jl">
+        <button onclick="cek()">cek</button>
+        <div id="hasil"></div>
+        <script>
+            function cek(){
+            let status = document.getElementById('sts').value
+            let jlf =parseInt(document.getElementById('jl').value)
+            if (status ="langganan") {
+                var hpp = 75
+            } else {
+                if (jl < 100) {
+                  var hpp = 100
+                } else {
+                  var hpp = 85
+                }
+            }
+            let th = jlf * hpp
+            document.getElementById('hasil').innerHTML = "TH" + th
+        }
+        </script>
+    </form>
+</body>
+</html>
